@@ -50,7 +50,7 @@ console.log(playerList[1].favorites[1]);
 
 //Q5 四則演算
 
-console.log((playerList[0].age + playerList[1].age + playerList[2].age)/ 3);
+console.log((playerList[0].age + playerList[1].age + playerList[2].age)/ playerList.length);
 
 //Q6 関数
 
@@ -169,7 +169,7 @@ for (let i = 0; i < mixed.length; i++) {
     } else {
         console.log('odd');
     }
-}     else {
+    } else {
     console.log('not number');
     }
 }
