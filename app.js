@@ -3,14 +3,14 @@
 let nickname = ('ごっしー')
 let age = ('28')
 
-console.log('私のニックネームは' + nickname + 'です。年齢は' + age + 'です。');
+console.log('私のニックネームは' + nickname + 'です。年齢は' + age + '歳です。');
 
 
 //Q2 配列
 
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
-
-console.log(`私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`);
+let languegestext = `私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`;
+console.log(languegestext);
 
 
 //Q3 オブジェクト
@@ -52,7 +52,6 @@ console.log(playerList[1].favorites[1]);
 
 console.log((playerList[0].age + playerList[1].age + playerList[2].age)/ 3);
 
-
 //Q6 関数
 
 function sayHello(){
@@ -60,20 +59,20 @@ function sayHello(){
 }
 sayHello();
 
-sayHello(function(){
-    console.log('Hoello')
-})
-
+let sayWorld = function(){
+    console.log('World')
+}
+sayWorld();
 
 //Q7 メソッド
 
 user.birthday = '2000-09-27';
-user.sayHello = function() {
-  console.log('Hello！');
-};
-
-user.sayHello();
 console.log(user);
+
+user.sayHello = function (){
+    console.log('Hello!')
+}
+user.sayHello();
 
 
 //Q8 引数
@@ -104,18 +103,17 @@ calc.divide(10, 2)
 //Q9 返り値
 
 function remainder(x, y){
-    return x % y;
+    let result = x % y;
+    return result;
 };
 
-const result = remainder(5, 3);
-
-console.log('5を3で割った余りは' + result + 'です。');
+console.log('5を3で割った余りは' + remainder(5, 3) + 'です。');
 
 
 //Q10 スコープ
 
 
-// スコープが有効になっていないため、参照ができない。
+// ｘは関数の中で定義されているので、ローカル変数になっていて、スコープが有効になっていないため、参照ができない。
 
 
 //応用編 問題
@@ -123,10 +121,9 @@ console.log('5を3で割った余りは' + result + 'です。');
 
 //Q1 標準組み込みオブジェクト
 
-let random = Math.random();
-let ten = random * 10;
-let answer= Math.floor(ten);
-console.log(answer);
+let randomNum = Math.floor(Math.random() * 10);
+
+console.log(randomNum);
 
 
 //Q2 コールバック関数
@@ -174,4 +171,5 @@ for (let i = 0; i < mixed.length; i++) {
     }
 }     else {
     console.log('not number');
+    }
 }
